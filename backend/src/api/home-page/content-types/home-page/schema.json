@@ -12,15 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "HeroImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "images.hero-image"
     }
   }
 }

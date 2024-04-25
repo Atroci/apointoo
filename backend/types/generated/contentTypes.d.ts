@@ -374,7 +374,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    image: Attribute.Media;
+    HeroImage: Attribute.Component<'images.hero-image'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

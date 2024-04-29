@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Apointoo",
   description: "Generate appointments with ease",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon_apointoo.ico",
   },
 };
 
@@ -35,43 +35,43 @@ export default function RootLayout({
           <RefineKbarProvider>
             <ColorModeContextProvider defaultMode={defaultMode}>
               <RefineSnackbarProvider>
-                  <Refine
-                    routerProvider={routerProvider}
-                    authProvider={authProvider}
-                    dataProvider={dataProvider}
-                    notificationProvider={notificationProvider}
-                    resources={[
-                      {
-                        name: "blog-posts",
-                        list: "/blog-posts",
-                        create: "/blog-posts/create",
-                        edit: "/blog-posts/edit/:id",
-                        show: "/blog-posts/show/:id",
-                        meta: {
-                          canDelete: true,
-                        },
+                <Refine
+                  routerProvider={routerProvider}
+                  authProvider={authProvider}
+                  dataProvider={dataProvider}
+                  notificationProvider={notificationProvider}
+                  resources={[
+                    {
+                      name: "blog-posts",
+                      list: "/blog-posts",
+                      create: "/blog-posts/create",
+                      edit: "/blog-posts/edit/:id",
+                      show: "/blog-posts/show/:id",
+                      meta: {
+                        canDelete: true,
                       },
-                      {
-                        name: "categories",
-                        list: "/categories",
-                        create: "/categories/create",
-                        edit: "/categories/edit/:id",
-                        show: "/categories/show/:id",
-                        meta: {
-                          canDelete: true,
-                        },
+                    },
+                    {
+                      name: "categories",
+                      list: "/categories",
+                      create: "/categories/create",
+                      edit: "/categories/edit/:id",
+                      show: "/categories/show/:id",
+                      meta: {
+                        canDelete: true,
                       },
-                    ]}
-                    options={{
-                      syncWithLocation: true,
-                      warnWhenUnsavedChanges: true,
-                      useNewQueryKeys: true,
-                      projectId: "fhQSeU-qb9kwX-tkHkuU",
-                    }}
-                  >
-                    {children}
-                    <RefineKbar />
-                  </Refine>
+                    },
+                  ]}
+                  options={{
+                    syncWithLocation: true,
+                    warnWhenUnsavedChanges: true,
+                    useNewQueryKeys: true,
+                    projectId: "fhQSeU-qb9kwX-tkHkuU",
+                  }}
+                >
+                  {children}
+                  <RefineKbar />
+                </Refine>
               </RefineSnackbarProvider>
             </ColorModeContextProvider>
           </RefineKbarProvider>
@@ -80,4 +80,3 @@ export default function RootLayout({
     </html>
   );
 }
-
